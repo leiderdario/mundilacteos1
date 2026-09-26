@@ -4,6 +4,7 @@ import React from "react";
 import { Preloader } from "@/components/Preloader";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { TrustMetrics } from "@/components/TrustMetrics";
 import { MilkShowcase } from "@/components/MilkShowcase";
 import { HorizontalProducts } from "@/components/HorizontalProducts";
 import { StorySection } from "@/components/StorySection";
@@ -22,6 +23,9 @@ export default function Home() {
       <main>
         {/* Inicio: Hero with 3D Milk Pouch & Direct Commercial CTA */}
         <Hero />
+
+        {/* Corporate Trust & Authority Metrics */}
+        <TrustMetrics />
 
         {/* Nosotros: Storytelling, 12 years of history & Cartagena Europark plant */}
         <StorySection />

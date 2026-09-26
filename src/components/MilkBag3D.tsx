@@ -295,12 +295,12 @@ export const MilkBag3D: React.FC<MilkBag3DProps> = ({ className = "" }) => {
       {/* 3D WebGL Canvas Container */}
       <div
         ref={containerRef}
-        className="w-full h-[320px] sm:h-[440px] md:h-[520px] flex items-center justify-center cursor-grab active:cursor-grabbing relative z-10 touch-none"
+        className="w-full h-[260px] sm:h-[360px] md:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing relative z-10 touch-none"
       />
 
       {/* Fallback 2.5D Animated Graphic if WebGL fails */}
       {!webglAvailable && (
-        <div className="relative w-80 h-96 flex items-center justify-center">
+        <div className="relative w-64 h-72 sm:w-80 sm:h-96 flex items-center justify-center">
           <Image
             src="/images/the-cantaro-doble.png"
             alt="The Cántaro Leche en Polvo"
@@ -314,13 +314,13 @@ export const MilkBag3D: React.FC<MilkBag3DProps> = ({ className = "" }) => {
 
       {/* Interactive Helper Badge */}
       <div
-        className={`absolute bottom-3 left-1/2 -translate-x-1/2 z-20 pointer-events-none transition-all duration-300 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-emerald-200/80 shadow-md ${
+        className={`absolute bottom-2 left-1/2 -translate-x-1/2 z-20 pointer-events-none transition-all duration-300 flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-emerald-200/80 shadow-md ${
           isInteracting ? "opacity-0 translate-y-2" : isHovered ? "opacity-100 translate-y-0 scale-105" : "opacity-80 translate-y-0"
         }`}
       >
-        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-        <span className="text-[11px] font-bold text-emerald-950 uppercase tracking-wider font-mono">
-          {isInteracting ? "Explorando..." : "Arrastra o mueve para girar la bolsa"}
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+        <span className="text-[10px] sm:text-[11px] font-bold text-emerald-950 uppercase tracking-wider font-mono">
+          {isInteracting ? "Girando..." : "Toca para girar la bolsa 3D"}
         </span>
       </div>
     </div>

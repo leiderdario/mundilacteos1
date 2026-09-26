@@ -37,7 +37,7 @@ export const MilkShowcase: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#FAF9F5] via-[#F5F2EB] to-[#FAF9F5] border-t border-b border-emerald-100/60">
+    <section className="py-14 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#FAF9F5] via-[#F5F2EB] to-[#FAF9F5] border-t border-b border-emerald-100/60">
       {/* Dairy Splash & Milk Wave Background SVGs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Large creamy milk wave ripple 1 */}
@@ -73,23 +73,23 @@ export const MilkShowcase: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Dairy Decor */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-emerald-200 text-emerald-800 text-xs font-black uppercase tracking-wider mb-4 shadow-xs">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-emerald-200 text-emerald-800 text-[10px] sm:text-xs font-black uppercase tracking-wider mb-2.5 sm:mb-4 shadow-xs">
             <Droplets className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
             <span>Materia Prima Seleccionada • Grado Alimenticio</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-2 sm:mb-4">
             El Protagonista: <span className="text-emerald-800">La Leche</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
+          <p className="text-xs sm:text-base lg:text-lg text-slate-700 leading-relaxed">
             Cada gramo de nuestra leche en polvo entera condensa la riqueza del campo ganadero y la más rigurosa tecnología de evaporación y secado por aspersión.
           </p>
         </div>
 
         {/* Big Milk Showcase Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           {/* Left: Interactive Feature Pillars */}
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-3 sm:space-y-4">
             {pillars.map((p) => {
               const Icon = p.icon;
               const isSelected = activeTab === p.id;
@@ -97,34 +97,34 @@ export const MilkShowcase: React.FC = () => {
                 <div
                   key={p.id}
                   onClick={() => setActiveTab(p.id)}
-                  className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 border ${
+                  className={`p-3.5 sm:p-6 rounded-xl sm:rounded-2xl cursor-pointer transition-all duration-300 border ${
                     isSelected
-                      ? "bg-white border-emerald-400 shadow-xl translate-x-2 ring-2 ring-emerald-500/10"
+                      ? "bg-white border-emerald-400 shadow-lg sm:shadow-xl sm:translate-x-2 ring-2 ring-emerald-500/10"
                       : "bg-white/80 backdrop-blur-sm border-slate-200/80 hover:border-emerald-300 hover:bg-white"
                   }`}
                   data-cursor="DETALLE"
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
                     <div
-                      className={`p-3 rounded-xl transition-colors ${
+                      className={`p-2 sm:p-3 rounded-lg sm:rounded-xl transition-colors flex-shrink-0 ${
                         isSelected ? "bg-emerald-700 text-white shadow-sm" : "bg-emerald-50 text-emerald-800"
                       }`}
                     >
-                      <Icon className="w-6 h-6" />
+                      <Icon className="w-4 h-4 sm:w-6 sm:h-6" />
                     </div>
 
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-1">
-                        <h3 className="text-lg font-bold text-slate-900">{p.title}</h3>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-1 gap-2">
+                        <h3 className="text-sm sm:text-lg font-bold text-slate-900 truncate">{p.title}</h3>
                         <span
-                          className={`text-xs font-black px-2.5 py-0.5 rounded-full ${
+                          className={`text-[10px] sm:text-xs font-black px-2 sm:px-2.5 py-0.5 rounded-full flex-shrink-0 ${
                             isSelected ? "bg-emerald-700 text-white" : "bg-emerald-50 text-emerald-800"
                           }`}
                         >
                           {p.metric}
                         </span>
                       </div>
-                      <p className="text-sm text-slate-600 leading-relaxed">{p.desc}</p>
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2 sm:line-clamp-none">{p.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -132,35 +132,35 @@ export const MilkShowcase: React.FC = () => {
             })}
 
             {/* B2B Commercial Badges Strip */}
-            <div className="p-4 rounded-2xl bg-white border border-emerald-200/80 shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs font-bold text-slate-800">
+            <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-emerald-200/80 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3 text-[11px] sm:text-xs font-bold text-slate-800">
               <div className="flex items-center gap-2">
-                <Store className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <Store className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 flex-shrink-0" />
                 <span>Excelente margen para tiendas y canal detallista</span>
               </div>
               <div className="flex items-center gap-2">
-                <Package className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>Formatos individuales desde 27g hasta 1kg</span>
+                <Package className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 flex-shrink-0" />
+                <span>Formatos desde 27g hasta 25kg</span>
               </div>
             </div>
           </div>
 
           {/* Right: Large Heroic Product Imagery on Milk Splash Stage */}
           <div className="lg:col-span-6 flex items-center justify-center relative">
-            <div className="relative w-full max-w-md h-[480px] flex items-center justify-center">
+            <div className="relative w-full max-w-md h-[300px] sm:h-[480px] flex items-center justify-center">
               {/* Milk Splash Graphic Backdrop */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-white via-[#F4F1E8] to-white border-2 border-white shadow-2xl p-6 flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-white via-[#F4F1E8] to-white border-2 border-white shadow-xl sm:shadow-2xl p-4 sm:p-6 flex items-center justify-center overflow-hidden">
                 {/* Concentric Milk Splash Rings */}
-                <div className="absolute w-80 h-80 rounded-full border-4 border-white/80 animate-ping opacity-20 pointer-events-none" />
-                <div className="absolute w-96 h-96 rounded-full bg-radial from-white via-emerald-50/40 to-transparent pointer-events-none" />
+                <div className="absolute w-60 h-60 sm:w-80 sm:h-80 rounded-full border-4 border-white/80 animate-ping opacity-20 pointer-events-none" />
+                <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-radial from-white via-emerald-50/40 to-transparent pointer-events-none" />
 
                 {/* Milk Droplets Decor in Stage */}
-                <div className="absolute top-4 left-6 px-3 py-1 rounded-full bg-white/95 text-[11px] font-bold text-emerald-800 border border-emerald-100 shadow-xs flex items-center gap-1.5">
+                <div className="absolute top-3 left-4 sm:top-4 sm:left-6 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/95 text-[10px] sm:text-[11px] font-bold text-emerald-800 border border-emerald-100 shadow-xs flex items-center gap-1.5">
                   <Sparkles className="w-3 h-3 text-amber-500" />
                   <span>Atmósfera Pura CO2</span>
                 </div>
 
                 {/* Product Image Stage */}
-                <div className="relative w-72 h-84 sm:w-80 sm:h-96 transition-transform duration-500 hover:scale-105 z-10">
+                <div className="relative w-52 h-60 sm:w-80 sm:h-96 transition-transform duration-500 hover:scale-105 z-10">
                   <Image
                     src={
                       activeTab === 0
@@ -177,11 +177,11 @@ export const MilkShowcase: React.FC = () => {
                 </div>
 
                 {/* Floating Metric Bubble */}
-                <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-emerald-100 text-center z-20">
-                  <span className="text-xl font-black text-emerald-800 block leading-none">
+                <div className="absolute bottom-3 right-4 sm:bottom-6 sm:right-6 bg-white/95 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-xl sm:rounded-2xl shadow-xl border border-emerald-100 text-center z-20">
+                  <span className="text-base sm:text-xl font-black text-emerald-800 block leading-none">
                     {pillars[activeTab].metric}
                   </span>
-                  <span className="text-[10px] uppercase font-black text-slate-500 tracking-wider">
+                  <span className="text-[9px] sm:text-[10px] uppercase font-black text-slate-500 tracking-wider">
                     {pillars[activeTab].metricLabel}
                   </span>
                 </div>

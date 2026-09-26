@@ -33,7 +33,7 @@ export const StorySection: React.FC = () => {
   ];
 
   return (
-    <section id="nosotros" className="py-24 bg-gradient-to-b from-[#FAF9F5] via-[#F4EFE6]/60 to-[#FAF9F5] relative overflow-hidden border-t border-b border-emerald-100/60">
+    <section id="nosotros" className="py-14 sm:py-24 bg-gradient-to-b from-[#FAF9F5] via-[#F4EFE6]/60 to-[#FAF9F5] relative overflow-hidden border-t border-b border-emerald-100/60">
       {/* Background Dairy Elements & Milk Splash Contours */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Subtle Organic Milk Blob Top Left */}
@@ -67,37 +67,37 @@ export const StorySection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-emerald-200 text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 shadow-xs">
+        <div className="max-w-3xl mb-8 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-emerald-200 text-emerald-800 text-[10px] sm:text-xs font-black uppercase tracking-wider mb-2.5 sm:mb-3 shadow-xs">
             <History className="w-3.5 h-3.5 text-emerald-700" />
             <span>{t("storyBadge")}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             De un sueño familiar en Cartagena, <br className="hidden sm:inline" />
             <span className="text-emerald-800">a la mesa y comercio de toda Colombia</span>
           </h2>
         </div>
 
         {/* Story Grid: Narrative + Real Plant Photos */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center mb-10 sm:mb-16">
           {/* Narrative Column */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="p-6 rounded-3xl bg-white/90 backdrop-blur-sm border border-emerald-100 shadow-md space-y-4">
-              <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+          <div className="lg:col-span-6 space-y-4 sm:space-y-6">
+            <div className="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/90 backdrop-blur-sm border border-emerald-100 shadow-md space-y-3 sm:space-y-4">
+              <p className="text-sm sm:text-lg text-slate-700 leading-relaxed font-normal">
                 {t("storyP1")}
               </p>
-              <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+              <p className="text-sm sm:text-lg text-slate-700 leading-relaxed font-normal">
                 {t("storyP2")}
               </p>
             </div>
 
             {/* B2B Commercial Distribution Badge */}
-            <div className="p-5 rounded-2xl bg-white border border-emerald-200 shadow-xs flex items-start gap-4">
-              <div className="p-2.5 rounded-xl bg-emerald-700 text-white flex-shrink-0">
-                <Store className="w-5 h-5" />
+            <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-emerald-200 shadow-xs flex items-start gap-3 sm:gap-4">
+              <div className="p-2 sm:p-2.5 rounded-xl bg-emerald-700 text-white flex-shrink-0">
+                <Store className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wide">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wide">
                   Enfoque en Tiendas, Supermercados y Mayoristas
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-snug">
@@ -107,18 +107,18 @@ export const StorySection: React.FC = () => {
             </div>
 
             {/* Corporate Location Details Card */}
-            <div className="p-5 rounded-2xl bg-emerald-50/80 border border-emerald-200 flex items-start gap-4">
-              <div className="p-2.5 rounded-xl bg-emerald-800 text-white flex-shrink-0">
-                <MapPin className="w-5 h-5" />
+            <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-emerald-50/80 border border-emerald-200 flex items-start gap-3 sm:gap-4">
+              <div className="p-2 sm:p-2.5 rounded-xl bg-emerald-800 text-white flex-shrink-0">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-emerald-950 uppercase tracking-wide">
+                <h4 className="text-xs sm:text-sm font-bold text-emerald-950 uppercase tracking-wide">
                   Sede Operativa y Planta Principal
                 </h4>
                 <p className="text-xs sm:text-sm text-emerald-900/90 mt-1 font-medium">
                   {siteConfig.company.address.full}, {siteConfig.company.address.city}, {siteConfig.company.address.country}
                 </p>
-                <span className="inline-block mt-2 text-[11px] font-bold text-emerald-800 bg-white px-2.5 py-0.5 rounded-md border border-emerald-200 shadow-2xs">
+                <span className="inline-block mt-2 text-[10px] sm:text-[11px] font-bold text-emerald-800 bg-white px-2 py-0.5 rounded-md border border-emerald-200 shadow-2xs">
                   Despachos a los 32 departamentos
                 </span>
               </div>
@@ -126,8 +126,8 @@ export const StorySection: React.FC = () => {
           </div>
 
           {/* Photo Collage Column with Milk Ripple Styling */}
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            <div className="relative h-64 sm:h-72 rounded-3xl overflow-hidden shadow-xl border-2 border-white group">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="relative h-48 sm:h-72 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 border-white group">
               <Image
                 src="/images/foto-planta.jpg"
                 alt="Planta de producción y empaque Mundilácteos"
@@ -135,12 +135,12 @@ export const StorySection: React.FC = () => {
                 sizes="(max-width: 768px) 50vw, 300px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
-                <span className="text-white text-xs font-bold">Planta Cartagena Europark</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3 sm:p-4">
+                <span className="text-white text-[10px] sm:text-xs font-bold">Planta Cartagena Europark</span>
               </div>
             </div>
 
-            <div className="relative h-64 sm:h-72 rounded-3xl overflow-hidden shadow-xl border-2 border-white group mt-6">
+            <div className="relative h-48 sm:h-72 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 border-white group mt-3 sm:mt-6">
               <Image
                 src="/images/foto-equipo.jpg"
                 alt="Equipo humano de Mundilácteos"
@@ -148,32 +148,35 @@ export const StorySection: React.FC = () => {
                 sizes="(max-width: 768px) 50vw, 300px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-4">
-                <span className="text-white text-xs font-bold">Compromiso y Calidad Humana</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-3 sm:p-4">
+                <span className="text-white text-[10px] sm:text-xs font-bold">Compromiso y Calidad Humana</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Visual Timeline Stepper */}
-        <div className="pt-10 border-t border-emerald-200/60">
-          <h3 className="text-xs font-black uppercase tracking-widest text-slate-500 mb-8 text-center sm:text-left">
-            12 Años de Crecimiento y Confianza Comercial
-          </h3>
+        {/* Visual Timeline Stepper: Horizontal snap on mobile, 4-col on desktop */}
+        <div className="pt-6 sm:pt-10 border-t border-emerald-200/60">
+          <div className="flex items-center justify-between mb-4 sm:mb-8">
+            <h3 className="text-[11px] sm:text-xs font-black uppercase tracking-widest text-slate-500">
+              12 Años de Crecimiento y Confianza Comercial
+            </h3>
+            <span className="sm:hidden text-[10px] text-emerald-700 font-bold">Desliza →</span>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 no-scrollbar snap-x">
             {timelineSteps.map((step) => (
               <div
                 key={step.year}
-                className="relative p-6 rounded-3xl bg-white/90 backdrop-blur-sm border border-emerald-100 shadow-md hover:border-emerald-300 transition-all hover:-translate-y-1"
+                className="flex-shrink-0 w-[240px] sm:w-auto snap-start relative p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/90 backdrop-blur-sm border border-emerald-100 shadow-sm hover:border-emerald-300 transition-all hover:-translate-y-1"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-black text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200 font-mono">
+                  <span className="text-[11px] sm:text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 font-mono">
                     {step.year}
                   </span>
                 </div>
-                <h4 className="text-sm font-bold text-slate-900 mb-1">{step.title}</h4>
-                <p className="text-xs text-slate-600 leading-relaxed">{step.desc}</p>
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 mb-1">{step.title}</h4>
+                <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
