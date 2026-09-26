@@ -295,7 +295,7 @@ export const MilkBag3D: React.FC<MilkBag3DProps> = ({ className = "" }) => {
       {/* 3D WebGL Canvas Container */}
       <div
         ref={containerRef}
-        className="w-full h-[450px] sm:h-[500px] md:h-[560px] flex items-center justify-center cursor-grab active:cursor-grabbing relative z-10"
+        className="w-full h-[320px] sm:h-[440px] md:h-[520px] flex items-center justify-center cursor-grab active:cursor-grabbing relative z-10 touch-none"
       />
 
       {/* Fallback 2.5D Animated Graphic if WebGL fails */}

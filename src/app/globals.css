@@ -50,6 +50,43 @@
   background: #94a3b8;
 }
 
+/* Custom Dairy Distributor Cursor (Desktop only, fine pointers) */
+@media (hover: hover) and (pointer: fine) {
+  html, body {
+    cursor: url('/images/cursor-default.svg') 4 4, auto;
+  }
+  
+  a, button, [role="button"], input, select, textarea, label, [data-cursor], .cursor-pointer {
+    cursor: url('/images/cursor-pointer.svg') 6 3, pointer !important;
+  }
+}
+
+/* Ensure Preloader milk is ALWAYS pure white in both light and dark mode */
+#brand-preloader,
+#brand-preloader * {
+  color-scheme: only light !important;
+  forced-color-adjust: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #brand-preloader {
+    background-color: #0b132b !important;
+  }
+  #brand-preloader .preloader-bottle-glass {
+    fill: rgba(255, 255, 255, 0.12) !important;
+    stroke: rgba(52, 211, 153, 0.6) !important;
+  }
+  #brand-preloader .preloader-text-title {
+    color: #ffffff !important;
+  }
+  #brand-preloader .preloader-text-sub {
+    color: #6ee7b7 !important;
+  }
+  #brand-preloader .preloader-percent {
+    color: #34d399 !important;
+  }
+}
+
 /* Animations & Glass */
 .glass-nav {
   background: rgba(255, 255, 255, 0.85);
@@ -91,3 +128,4 @@
     scroll-behavior: auto !important;
   }
 }
+

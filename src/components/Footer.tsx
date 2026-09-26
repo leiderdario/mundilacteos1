@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteConfig } from "@/config/site";
 import { Globe, MapPin, Phone, Mail, ShieldCheck } from "lucide-react";
@@ -13,28 +14,24 @@ export const Footer: React.FC = () => {
     <footer className="bg-slate-950 text-white pt-16 pb-12 border-t border-emerald-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
-          {/* Brand Info */}
+          {/* Brand Info with Official Company Logo */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-white rounded-xl p-1 flex items-center justify-center">
+            <div className="flex items-center">
+              <div className="relative w-48 sm:w-56 h-12 bg-white/95 rounded-2xl px-3 py-1 flex items-center shadow-md">
                 <Image
-                  src="/images/logo.png"
-                  alt="Mundilácteos"
-                  width={36}
-                  height={36}
-                  className="object-contain"
+                  src="/images/logo-mundilacteos-full.png"
+                  alt="MundiLácteos"
+                  fill
+                  className="object-contain p-1.5"
                 />
               </div>
-              <span className="text-xl font-extrabold tracking-tight text-white">
-                MUNDI<span className="text-emerald-400 font-light">LÁCTEOS</span>
-              </span>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
               {siteConfig.company.slogan[language] || siteConfig.company.slogan.es}
             </p>
 
-            {/* Social Media inline SVGs */}
+            {/* Social Media */}
             <div className="flex items-center gap-3 pt-2">
               <a
                 href={siteConfig.company.socials.instagram}
@@ -72,16 +69,16 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
+          {/* Dedicated Navigation Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Explorar</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">Navegación</h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li><a href="#inicio" className="hover:text-emerald-400 transition-colors">{t("navHome")}</a></li>
-              <li><a href="#nosotros" className="hover:text-emerald-400 transition-colors">{t("navAbout")}</a></li>
-              <li><a href="#productos" className="hover:text-emerald-400 transition-colors">{t("navProducts")}</a></li>
-              <li><a href="#calidad" className="hover:text-emerald-400 transition-colors">{t("navQuality")}</a></li>
-              <li><a href="#aliados" className="hover:text-emerald-400 transition-colors">{t("navClients")}</a></li>
-              <li><a href="#contacto" className="hover:text-emerald-400 transition-colors">{t("navContact")}</a></li>
+              <li><Link href="/" className="hover:text-emerald-400 transition-colors">{t("navHome")}</Link></li>
+              <li><Link href="/#nosotros" className="hover:text-emerald-400 transition-colors">{t("navAbout")}</Link></li>
+              <li><Link href="/#productos" className="hover:text-emerald-400 transition-colors">{t("navProducts")}</Link></li>
+              <li><Link href="/calidad-y-proceso" className="hover:text-emerald-400 transition-colors">Calidad y Proceso</Link></li>
+              <li><Link href="/aliados" className="hover:text-emerald-400 transition-colors">Aliados Comerciales</Link></li>
+              <li><Link href="/contacto" className="hover:text-emerald-400 transition-colors">Contacto Comercial</Link></li>
             </ul>
           </div>
 
@@ -122,7 +119,7 @@ export const Footer: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setLanguage("es")}
-                className={`hover:text-white ${language === "es" ? "text-emerald-400 font-bold" : ""}`}
+                className={`hover:text-white cursor-pointer ${language === "es" ? "text-emerald-400 font-bold" : ""}`}
               >
                 Español
               </button>
@@ -130,7 +127,7 @@ export const Footer: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setLanguage("en")}
-                className={`hover:text-white ${language === "en" ? "text-emerald-400 font-bold" : ""}`}
+                className={`hover:text-white cursor-pointer ${language === "en" ? "text-emerald-400 font-bold" : ""}`}
               >
                 English
               </button>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Interactive Milk Splash / Pointer Cursor -->
+  <defs>
+    <filter id="shadowP" x="-10%" y="-10%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.2" flood-color="#064e3b" flood-opacity="0.4"/>
+    </filter>
+    <linearGradient id="activeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#shadowP)">
+    <!-- Pointing Finger / Milk Drop with Ripple -->
+    <path d="M6 3 C9 9 17 14 17 19 C17 23.5 13.5 26.5 9 26.5 C4.5 26.5 1.5 23.5 1.5 19 C1.5 14 6 3 6 3 Z" 
+          fill="url(#activeGrad)" 
+          stroke="#ffffff" 
+          stroke-width="1.8" 
+          stroke-linejoin="round"/>
+    
+    <!-- White milk drop inside -->
+    <circle cx="9" cy="20" r="3.5" fill="#ffffff" opacity="0.95"/>
+    <circle cx="10" cy="19" r="1.5" fill="#d1fae5"/>
+
+    <!-- Micro splash beads -->
+    <circle cx="21" cy="8" r="1.8" fill="#047857" stroke="#ffffff" stroke-width="0.8"/>
+    <circle cx="24" cy="14" r="1.4" fill="#10b981" stroke="#ffffff" stroke-width="0.6"/>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Dairy Milk Drop Pointer -->
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1" flood-color="#064e3b" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="milkDropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+  </defs>
+  
+  <g filter="url(#shadow)">
+    <!-- Droplet Body pointing to (4,4) -->
+    <path d="M4 4 C7 11 15 15 15 20 C15 24 11.5 27 7.5 27 C3.5 27 1 24 1 20 C1 15 4 4 4 4 Z" 
+          fill="url(#milkDropGrad)" 
+          stroke="#047857" 
+          stroke-width="1.8" 
+          stroke-linejoin="round"/>
+    
+    <!-- Glossy reflection -->
+    <path d="M4 8 C4 8 3 13 3 18 C3 20 4 22 5.5 22.5" 
+          stroke="#047857" 
+          stroke-width="0.8" 
+          stroke-linecap="round" 
+          opacity="0.5"/>
+    <circle cx="5" cy="9" r="1" fill="#ffffff"/>
+  </g>
+</svg>

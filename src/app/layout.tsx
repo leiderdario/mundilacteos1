@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mundilacteos.com"),
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     type: "website"
   },
   icons: {
-    icon: "/images/logo.png"
+    icon: "/images/logo-mundilacteos-icon.png"
   }
 };
 
@@ -46,7 +47,9 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className="bg-[#FAF9F5] text-slate-900 antialiased selection:bg-emerald-600 selection:text-white">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
