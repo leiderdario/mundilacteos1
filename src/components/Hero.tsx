@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Directional Readability Wash */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#FAF9F5]/95 via-[#FAF9F5]/85 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#FAF9F5]/80 via-[#FAF9F5]/60 to-transparent pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#FAF9F5] to-transparent pointer-events-none z-0" />
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#FAF9F5] to-transparent pointer-events-none z-0" />
 
